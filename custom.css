@@ -109,3 +109,18 @@
   transform: scale(1.08);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
+
+
+.author-photo {
+  width: 280px;       /* atur ukuran lingkaran */
+  height: 280px;      /* sama dengan width agar tetap bulat */
+  object-fit: cover;  /* menjaga proporsi gambar */
+  border: 6px solid #0d6efd; /* lingkaran tepi lebih tebal */
+  border-radius: 50%; /* memastikan lingkaran */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* efek bayangan */
+}
+.author-photo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
