@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Detail Lagu - Music Blog</title>
+    <title>Detail Genre - Music Blog</title>
     <link
       rel="stylesheet"
       href="/assets/vendor/bootstrap-5.3.8-dist/css/bootstrap.min.css"
@@ -17,7 +17,7 @@
         <h1 class="mb-2 text-center">Music Blog</h1>
         <nav class="mb-2 d-flex justify-content-center">
           <a href="index.html" class="text-white mx-3 text-decoration-none fw-semibold">Home</a>
-          <a href="songDetail.html" class="text-white mx-3 text-decoration-none fw-semibold">Song Detail</a>
+          <a href="songDetail.html" class="text-white mx-3 text-decoration-none fw-semibold">Genre Detail</a>
           <a href="about.html" class="text-white mx-3 text-decoration-none fw-semibold">About</a>
         </nav>
         <hr class="border-light" />
@@ -27,91 +27,75 @@
     <!-- Main Content -->
     <main>
       <div class="container">
-        <div class="row">
-          <!-- Cover Art -->
-          <div class="col-md-4 mb-3">
-            <img src="https://i.scdn.co/image/ab67616d0000b2736e2c6c1d9db9d8c731f5c5a0" 
-                 alt="Cover Album" class="img-fluid rounded shadow">
-          </div>
-
-          <!-- Song Details -->
-          <div class="col-md-8">
-            <article class="mb-4">
-              <h2>Judul Lagu</h2>
-              <p><strong>Artis:</strong> Nama Artis</p>
-              <p><strong>Album:</strong> Nama Album</p>
-              <p><strong>Genre:</strong> Genre Lagu</p>
-              <p><strong>Deskripsi:</strong> Lagu ini bercerita tentang ...</p>
-              <p><strong>Informasi Latar Belakang:</strong> Lagu ini dirilis pada tahun ... dan sempat masuk ke chart Billboard.</p>
-              
-              <!-- Spotify Embed -->
-              <div class="mb-3">
-                <iframe style="border-radius:12px" 
-                        src="https://open.spotify.com/embed/track/2X485T9Z5Ly0xyaghN73ed?utm_source=generator" 
-                        width="100%" 
-                        height="152" 
-                        frameBorder="0" 
-                        allowfullscreen 
-                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture">
-                </iframe>
+        <h2 class="mb-4 text-center">Detail Genre Music</h2>
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+          <!-- Pop -->
+          <div class="col">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Pop</h5>
+                <p class="card-text">
+                  Musik Pop adalah genre yang muncul pada pertengahan abad ke-20 dan dibuat untuk mudah didengar banyak orang. Ciri khasnya sederhana, melodinya enak diingat, liriknya mudah dipahami, serta sering menggunakan pola bait dan reffrain. Genre ini dipopulerkan oleh musisi besar seperti The Beatles, Michael Jackson, Madonna, hingga artis modern seperti Taylor Swift dan Ed Sheeran. Di Indonesia, musisi seperti Tulus dan Raisa juga dikenal lewat lagu pop. Pop terus berkembang mengikuti tren sehingga selalu menjadi genre yang paling populer di dunia.
+                </p>
               </div>
-              
-              <!-- Listen Button -->
-              <a href="https://open.spotify.com/track/your_spotify_link" class="btn btn-success mb-3" target="_blank">Dengarkan di Spotify</a>
-            </article>
+            </div>
+          </div>
+          <!-- Rock -->
+          <div class="col">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Rock</h5>
+                <p class="card-text">
+                  Musik Rock berkembang pada tahun 1950-an dari perpaduan blues, country, dan R&B. Ciri khasnya adalah penggunaan gitar elektrik, drum, dan vokal yang kuat dengan energi penuh. Rock dipopulerkan oleh band legendaris seperti The Rolling Stones, Queen, dan Nirvana, serta di Indonesia oleh God Bless dan Slank. Hingga kini, Rock tetap identik dengan semangat kebebasan dan ekspresi yang kuat.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Jazz -->
+          <div class="col">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Jazz</h5>
+                <p class="card-text">
+                  Musik Jazz lahir di awal abad ke-20 di Amerika Serikat, dipengaruhi oleh blues dan ragtime. Ciri khasnya adalah improvisasi, ritme swing, serta harmoni yang kaya. Tokoh besar seperti Louis Armstrong dan Miles Davis membawa Jazz mendunia, dan hingga kini genre ini tetap menjadi simbol kebebasan berekspresi dalam musik.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Hip Hop -->
+          <div class="col">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Indie Folks</h5>
+                <p class="card-text">
+                  Indie Folks adalah subgenre musik independen yang berakar dari folk tradisional, dengan ciri khas instrumen akustik, vokal lembut, dan lirik puitis yang hangat serta personal. Genre ini populer sejak awal 2000-an lewat musisi seperti Bon Iver dan Novo Amor, dan di Indonesia diwakili oleh Payung Teduh. Musiknya sederhana, intim, dan penuh kedekatan emosional.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- EDM -->
+          <div class="col">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">EDM</h5>
+                <p class="card-text">
+                  EDM adalah genre musik elektronik yang berfokus pada beat, bass, dan efek sintetis, biasanya dimainkan di klub atau festival untuk menciptakan suasana energik. Genre ini populer sejak tahun 1990-an dengan DJ seperti David Guetta, Calvin Harris, dan Martin Garrix yang membawanya ke arus utama.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Dangdut -->
+          <div class="col">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Classical</h5>
+                <p class="card-text">
+                  Classical adalah genre musik yang berkembang sejak abad ke-17 di Eropa, ditandai dengan komposisi orkestra, piano, dan biola yang penuh harmoni serta struktur teratur. Tokoh pentingnya antara lain Mozart, Beethoven, dan Bach, yang menjadikan musik klasik abadi sebagai simbol keindahan dan kecerdasan musik.
+                </p>
+                  
+            </div>
           </div>
         </div>
-
-        <!-- Lirik -->
-        <section class="mb-4">
-          <h4>Lirik Lagu</h4>
-          <p>
-            "Potongan lirik lagu di sini... <br>
-            Bisa ditampilkan sebagian lalu tambahkan tombol untuk expand."
-          </p>
-          <button class="btn btn-outline-primary btn-sm">Tampilkan lebih banyak</button>
-        </section>
-
-        <!-- Fakta Menarik -->
-        <section class="mb-4">
-          <h4>Fakta Menarik</h4>
-          <ul class="list-group">
-            <li class="list-group-item">Lagu ini memenangkan penghargaan ...</li>
-            <li class="list-group-item">Diputar lebih dari 1 miliar kali di Spotify.</li>
-            <li class="list-group-item">Ditulis hanya dalam waktu 1 malam.</li>
-          </ul>
-        </section>
-
-        <!-- Rekomendasi Lagu -->
-        <section class="mb-4">
-          <h4>Rekomendasi Lagu Terkait</h4>
-          <div class="row">
-            <div class="col-md-4">
-              <div class="card h-100">
-                <iframe style="border-radius:12px" 
-                        src="https://open.spotify.com/embed/track/6rqhFgbbKwnb9MLmUQDhG6?utm_source=generator" 
-                        width="100%" 
-                        height="152" 
-                        frameBorder="0" 
-                        allowfullscreen 
-                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture">
-                </iframe>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card h-100">
-                <iframe style="border-radius:12px" 
-                        src="https://open.spotify.com/embed/track/732Zsh1L5ixRNgAmiPyvrp?utm_source=generator" 
-                        width="100%" 
-                        height="152" 
-                        frameBorder="0" 
-                        allowfullscreen 
-                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture">
-                </iframe>
-              </div>
-            </div>
-          </div>
-        </section>
       </div>
     </main>
 
@@ -122,7 +106,5 @@
         <p class="mb-0">&copy; 2025 Music Blog. Semua hak cipta dilindungi.</p>
       </div>
     </footer>
-
-    <script src="/assets/vendor/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
