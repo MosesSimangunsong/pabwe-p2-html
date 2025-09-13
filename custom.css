@@ -1,89 +1,111 @@
-.genre-card {
-  transition: transform 0.2s, box-shadow 0.2s;
-  cursor: pointer;
-}
-.genre-card:hover {
-  transform: translateY(-8px) scale(1.03);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-}
-.song-list {
-  display: none;
-}
-.genre-card.active .song-list {
-  display: block;
-  animation: fadeIn 0.4s;
-}
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.spotify-frame {
+  border-radius: 12px;
+  width: 100%;
+  height: 80px;
 }
 
-.genre-card {
+
+.lagupop {
+  background: linear-gradient(135deg, #232526, #414345);
   border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s, box-shadow 0.2s;
-  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s;
+  color: white;
+  padding: 20px;
+  text-align: center;
 }
-.genre-card:hover {
+
+/* Efek hover */
+.lagupop:hover {
   transform: scale(1.05);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
-/* Genre backgrounds */
-.genre-pop {
-  background: linear-gradient(135deg, #ff6ec4, #7873f5);
+
+/* Kartu Rock */
+.lagurock {
+  background: linear-gradient(135deg, #232526, #414345);
   border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
   transition: transform 0.3s;
 }
 
-.genre-pop:hover {
+/* Efek hover */
+.lagurock:hover {
   transform: scale(1.05);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
-.genre-rock {
-  background: linear-gradient(135deg, #232526, #414345);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
-}
-.genre-jazz {
+
+
+/* Kartu Jazz */
+.lagujazz {
   background: linear-gradient(135deg, #1e3c72, #2a5298);
+  border-radius: 15px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-}
-.genre-hindi {
-  background: linear-gradient(135deg, #ff512f, #dd2476);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-}
-.genre-edm {
-  background: linear-gradient(135deg, #00c6ff, #0072ff);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-}
-.genre-classical {
-  background: linear-gradient(135deg, #f9f9f9, #e2d1c3);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
 }
 
-/* Song list animation */
-.song-list {
-  display: none;
+/* Efek hover */
+.lagujazz:hover {
+  transform: scale(1.05);
 }
-.genre-card.active .song-list {
-  display: block;
-  animation: fadeIn 0.4s;
+
+
+.laguhindi {
+  background: linear-gradient(135deg, #ff512f, #dd2476);
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s;
 }
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+
+/* Efek hover */
+.laguhindi:hover {
+  transform: scale(1.05);
+}
+
+.laguedm{
+  background: linear-gradient(135deg, #11998e, #38ef7d);
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s;
+}
+
+.laguedm:hover {
+  transform: scale(1.05);
+}
+
+/* Card khusus Classical */
+.laguclassical {
+  background: linear-gradient(135deg, #f9f9f9, #e2d1c3);
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.laguclassical:hover {
+  transform: scale(1.05);
+}
+
+/* Styling Spotify iframe (dipakai semua genre) */
+.spotify-embed {
+  border-radius: 12px;
+}
+
+
+.btn-spotify {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 25px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #1db954, #1ed760);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-spotify:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }

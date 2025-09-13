@@ -8,12 +8,13 @@
       rel="stylesheet"
       href="assets/vendor/bootstrap-5.3.8-dist/css/bootstrap.min.css"
     />
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/custom.css" />
+
+    <link rel="stylesheet" href="custom.css" />
   </head>
   <body>
     <!-- Header -->
-    <header style="background-color: #1ed760" class="text-white py-4 mb-4">
+    <
+    <header class="bg-success text-white py-4 mb-4">
       <div class="container">
         <h1 class="mb-2 text-center">Music Blog</h1>
         <nav class="mb-2 d-flex justify-content-center">
@@ -44,20 +45,19 @@
         <div class="row g-4">
           <!-- Pop Card -->
           <div class="col-md-4">
-            <div class="card genre-card genre-pop h-100 text-white">
+            <div
+              class="card lagupop h-100 text-white"
+              onclick="toggleSongs(this)"
+            >
               <div class="card-body text-center">
                 <h3 class="card-title">🎶 Pop</h3>
-                <p class="card-text">
-                  Rekomendasi lagu pop terbaik untuk menemani harimu!
-                </p>
+                <p class="card-text">Rekomendasi lagu pop terbaik!</p>
                 <div class="song-list mt-3">
                   <ul class="list-group bg-transparent">
                     <li class="list-group-item bg-light rounded-3 mb-2">
                       <iframe
-                        style="border-radius: 12px"
+                        class="spotify-frame"
                         src="https://open.spotify.com/embed/track/7qiZfU4dY1lWllzX7mPBI3?utm_source=generator"
-                        width="100%"
-                        height="80"
                         frameborder="0"
                         allowfullscreen=""
                         allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
@@ -65,10 +65,77 @@
                     </li>
                     <li class="list-group-item bg-light rounded-3 mb-2">
                       <iframe
-                        style="border-radius: 12px"
+                        class="spotify-frame"
                         src="https://open.spotify.com/embed/track/3KkXRkHbMCARz0aVfEt68P?utm_source=generator"
-                        width="100%"
-                        height="80"
+                        frameborder="0"
+                        allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
+                      ></iframe>
+                    </li>
+                    <li class="list-group-item bg-light rounded-3 mb-2">
+                      <iframe
+                        class="spotify-frame"
+                        src="https://open.spotify.com/embed/track/32OlwWuMpZ6b0aN2RZOeMS?utm_source=generator"
+                        frameborder="0"
+                        allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
+                      ></iframe>
+                    </li>
+
+                    <li class="list-group-item bg-light rounded-3 mb-2">
+                      <iframe
+                        class="spotify-frame"
+                        src="https://open.spotify.com/embed/track/2H1047e0oMSj10dgp7p2VG?utm_source=generator"
+                        frameborder="0"
+                        allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
+                      ></iframe>
+                    </li>
+
+                    <li class="list-group-item bg-light rounded-3 mb-2">
+                      <iframe
+                        class="spotify-frame"
+                        src="https://open.spotify.com/embed/track/494OU6M7NOf4ICYb4zWCf5?utm_source=generator"
+                        frameborder="0"
+                        allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
+                      ></iframe>
+                    </li>
+
+                    <li class="list-group-item bg-light rounded-3 mb-2">
+                      <iframe
+                        class="spotify-frame"
+                        src="https://open.spotify.com/embed/track/5edBgVtRD0fvWk140Sl21T?utm_source=generator"
+                        frameborder="0"
+                        allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
+                      ></iframe>
+                    </li>
+
+                    <li class="list-group-item bg-light rounded-3 mb-2">
+                      <iframe
+                        class="spotify-frame"
+                        src="https://open.spotify.com/embed/track/0yLdNVWF3Srea0uzk55zFn?utm_source=generator"
+                        frameborder="0"
+                        allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
+                      ></iframe>
+                    </li>
+
+                    <li class="list-group-item bg-light rounded-3 mb-2">
+                      <iframe
+                        class="spotify-frame"
+                        src="https://open.spotify.com/embed/track/0yLdNVWF3Srea0uzk55zFn?utm_source=generator"
+                        frameborder="0"
+                        allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
+                      ></iframe>
+                    </li>
+
+                    <li class="list-group-item bg-light rounded-3 mb-2">
+                      <iframe
+                        class="spotify-frame"
+                        src="https://open.spotify.com/embed/track/3bDGwl0X3EjQmIyFD1uif5?utm_source=generator"
                         frameborder="0"
                         allowfullscreen=""
                         allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
@@ -76,11 +143,12 @@
                     </li>
                   </ul>
                   <a
-                    href="https://open.spotify.com/genre/pop"
+                    href="https://open.spotify.com/playlist/2f6zNZonYFKsGxFaYqjwm6?utm_source=generator"
                     target="_blank"
-                    class="btn btn-light btn-sm mt-2 shadow-sm"
-                    >Lihat di Spotify</a
+                    class="btn-spotify"
                   >
+                    Lihat di Spotify
+                  </a>
                 </div>
               </div>
             </div>
@@ -89,46 +157,100 @@
           <!-- Rock Card -->
           <div class="col-md-4">
             <div
-              class="card genre-card h-100 text-white"
-              style="
-                background: linear-gradient(135deg, #232526, #414345);
-                border-radius: 15px;
-                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
-                transition: transform 0.3s;
-              "
-              onmouseover="this.style.transform='scale(1.05)'"
-              onmouseout="this.style.transform='scale(1)'"
+              class="card lagurock h-100 text-white"
               onclick="toggleSongs(this)"
             >
               <div class="card-body text-center">
-                <!-- <span class="badge bg-danger mb-2">⚡ Power Rock</span> -->
                 <h3 class="card-title">🎸 Rock</h3>
                 <p class="card-text">
                   Energi dan semangat dari lagu-lagu rock pilihan!
                 </p>
                 <div class="song-list mt-3">
                   <ul class="list-group bg-transparent">
-                    <li
-                      class="list-group-item bg-dark text-white rounded-3 mb-2"
-                    >
+                    <li class="list-group-item bg-light rounded-3 mb-2">
                       <iframe
-                        style="border-radius: 12px"
-                        src="https://open.spotify.com/embed/track/3H8cRqHxtvG5tlMXEdxLr1?utm_source=generator"
-                        width="100%"
-                        height="80"
+                        class="spotify-frame"
+                        src="https://open.spotify.com/embed/track/265jHUE2zMARKwtIhkknsS?utm_source=generator"
                         frameborder="0"
                         allowfullscreen=""
                         allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
                       ></iframe>
                     </li>
-                    <li
-                      class="list-group-item bg-dark text-white rounded-3 mb-2"
-                    >
+
+                    <li class="list-group-item bg-light rounded-3 mb-2">
                       <iframe
-                        style="border-radius: 12px"
-                        src="https://open.spotify.com/embed/track/0eGsygTp906u18L0Oimnem?utm_source=generator"
-                        width="100%"
-                        height="80"
+                        class="spotify-frame"
+                        src="https://open.spotify.com/embed/track/3YRCqOhFifThpSRFJ1VWFM?utm_source=generator"
+                        frameborder="0"
+                        allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
+                      ></iframe>
+                    </li>
+
+                    <li class="list-group-item bg-light rounded-3 mb-2">
+                      <iframe
+                        class="spotify-frame"
+                        src="https://open.spotify.com/embed/track/60a0Rd6pjrkxjPbaKzXjfq?utm_source=generator"
+                        frameborder="0"
+                        allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
+                      ></iframe>
+                    </li>
+
+                    <li class="list-group-item bg-light rounded-3 mb-2">
+                      <iframe
+                        class="spotify-frame"
+                        src="https://open.spotify.com/embed/track/4TMhakloPMPS84lNHNTSa3?utm_source=generator"
+                        frameborder="0"
+                        allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
+                      ></iframe>
+                    </li>
+
+                    <li class="list-group-item bg-light rounded-3 mb-2">
+                      <iframe
+                        class="spotify-frame"
+                        src="https://open.spotify.com/embed/track/79UJTjTabqsQUhLkTJlSit?utm_source=generator"
+                        frameborder="0"
+                        allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
+                      ></iframe>
+                    </li>
+
+                    <li class="list-group-item bg-light rounded-3 mb-2">
+                      <iframe
+                        class="spotify-frame"
+                        src="https://open.spotify.com/embed/track/1AhDOtG9vPSOmsWgNW0BEY?utm_source=generator"
+                        frameborder="0"
+                        allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
+                      ></iframe>
+                    </li>
+
+                    <li class="list-group-item bg-light rounded-3 mb-2">
+                      <iframe
+                        class="spotify-frame"
+                        src="https://open.spotify.com/embed/track/1xOqGUkyxGQRdCvGpvWKmL?utm_source=generator"
+                        frameborder="0"
+                        allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
+                      ></iframe>
+                    </li>
+
+                    <li class="list-group-item bg-light rounded-3 mb-2">
+                      <iframe
+                        class="spotify-frame"
+                        src="https://open.spotify.com/embed/track/5FVd6KXrgO9B3JPmC8OPst?utm_source=generator"
+                        frameborder="0"
+                        allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
+                      ></iframe>
+                    </li>
+
+                    <li class="list-group-item bg-light rounded-3 mb-2">
+                      <iframe
+                        class="spotify-frame"
+                        src="https://open.spotify.com/embed/track/68HyvTUsmlpH1UJo9tn5v3?utm_source=generator"
                         frameborder="0"
                         allowfullscreen=""
                         allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
@@ -136,11 +258,12 @@
                     </li>
                   </ul>
                   <a
-                    href="https://open.spotify.com/genre/rock"
+                    href="https://open.spotify.com/playlist/7DgPQwzEoUVfQYBiMLER9Z?utm_source=generator"
                     target="_blank"
-                    class="btn btn-danger btn-sm mt-2 shadow-sm"
-                    >🔥 Lihat di Spotify</a
+                    class="btn-spotify"
                   >
+                    Lihat di Spotify
+                  </a>
                 </div>
               </div>
             </div>
@@ -149,19 +272,10 @@
           <!-- Jazz Card -->
           <div class="col-md-4">
             <div
-              class="card genre-card h-100 text-white"
-              style="
-                background: linear-gradient(135deg, #1e3c72, #2a5298);
-                border-radius: 15px;
-                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-                transition: transform 0.3s;
-              "
-              onmouseover="this.style.transform='scale(1.05)'"
-              onmouseout="this.style.transform='scale(1)'"
+              class="card lagujazz h-100 text-white"
               onclick="toggleSongs(this)"
             >
               <div class="card-body text-center">
-                <!-- <span class="badge bg-warning text-dark mb-2">🎷 Smooth Jazz</span> -->
                 <h3 class="card-title">🎶 Jazz</h3>
                 <p class="card-text fst-italic">
                   Nikmati suasana santai dengan lagu jazz favorit!
@@ -170,21 +284,88 @@
                   <ul class="list-group bg-transparent">
                     <li class="list-group-item bg-light rounded-3 mb-2">
                       <iframe
-                        style="border-radius: 12px"
-                        src="https://open.spotify.com/embed/track/2X485T9Z5Ly0xyaghN73ed?utm_source=generator"
-                        width="100%"
-                        height="80"
+                        class="spotify-frame"
+                        src="https://open.spotify.com/embed/track/43iIQbw5hx986dUEZbr3eN?utm_source=generator"
                         frameborder="0"
                         allowfullscreen=""
                         allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
                       ></iframe>
                     </li>
+
                     <li class="list-group-item bg-light rounded-3 mb-2">
                       <iframe
-                        style="border-radius: 12px"
-                        src="https://open.spotify.com/embed/track/6rqhFgbbKwnb9MLmUQDhG6?utm_source=generator"
-                        width="100%"
-                        height="80"
+                        class="spotify-frame"
+                        src="https://open.spotify.com/embed/track/1iZgzgmsFsi0deffe0rleB?utm_source=generator"
+                        frameborder="0"
+                        allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
+                      ></iframe>
+                    </li>
+
+                    <li class="list-group-item bg-light rounded-3 mb-2">
+                      <iframe
+                        class="spotify-frame"
+                        src="https://open.spotify.com/embed/track/1zNXF2svmdlNxfS5XeNUgr?utm_source=generator"
+                        frameborder="0"
+                        allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
+                      ></iframe>
+                    </li>
+
+                    <li class="list-group-item bg-light rounded-3 mb-2">
+                      <iframe
+                        class="spotify-frame"
+                        src="https://open.spotify.com/embed/track/1AM8QdDFZMq6SrrqUnuQ9P?utm_source=generator"
+                        frameborder="0"
+                        allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
+                      ></iframe>
+                    </li>
+
+                    <li class="list-group-item bg-light rounded-3 mb-2">
+                      <iframe
+                        class="spotify-frame"
+                        src="https://open.spotify.com/embed/track/6Rqn2GFlmvmV4w9Ala0I1e?utm_source=generator"
+                        frameborder="0"
+                        allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
+                      ></iframe>
+                    </li>
+
+                    <li class="list-group-item bg-light rounded-3 mb-2">
+                      <iframe
+                        class="spotify-frame"
+                        src="https://open.spotify.com/embed/track/6jGnykaS6TkWp15utXSAeI?utm_source=generator"
+                        frameborder="0"
+                        allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
+                      ></iframe>
+                    </li>
+
+                    <li class="list-group-item bg-light rounded-3 mb-2">
+                      <iframe
+                        class="spotify-frame"
+                        src="https://open.spotify.com/embed/track/4FmCUATNIarCQh72JYdvnm?utm_source=generator"
+                        frameborder="0"
+                        allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
+                      ></iframe>
+                    </li>
+
+                    <li class="list-group-item bg-light rounded-3 mb-2">
+                      <iframe
+                        class="spotify-frame"
+                        src="https://open.spotify.com/embed/track/0KBvapFwuz8gPKu6Gw23WN?utm_source=generator"
+                        frameborder="0"
+                        allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
+                      ></iframe>
+                    </li>
+
+                    <li class="list-group-item bg-light rounded-3 mb-2">
+                      <iframe
+                        class="spotify-frame"
+                        src="https://open.spotify.com/embed/track/5IIybI1oiOCY3DRUrpQ7zA?utm_source=generator"
                         frameborder="0"
                         allowfullscreen=""
                         allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
@@ -192,11 +373,12 @@
                     </li>
                   </ul>
                   <a
-                    href="https://open.spotify.com/genre/jazz"
+                    href="https://open.spotify.com/playlist/5rdgRwdMskt1IJKjNf0VWQ?utm_source=generator"
                     target="_blank"
-                    class="btn btn-warning text-dark btn-sm mt-2 shadow-sm"
-                    >☕ Lihat di Spotify</a
+                    class="btn-spotify"
                   >
+                    Lihat di Spotify
+                  </a>
                 </div>
               </div>
             </div>
@@ -205,85 +387,59 @@
           <!-- Hindi Card -->
           <div class="col-md-4">
             <div
-              class="card genre-card h-100 text-white"
-              style="
-                background: linear-gradient(135deg, #ff512f, #dd2476);
-                border-radius: 15px;
-                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-                transition: transform 0.3s;
-              "
-              onmouseover="this.style.transform='scale(1.05)'"
-              onmouseout="this.style.transform='scale(1)'"
+              class="card laguhindi h-100 text-white"
               onclick="toggleSongs(this)"
             >
               <div class="card-body text-center">
-                <!-- <span class="badge bg-warning text-dark mb-2">🌺 Bollywood Vibes</span> -->
                 <h3 class="card-title">🎤 Hindi</h3>
-                <p class="card-text">
-                  Rekomendasi lagu Hindi terbaik untuk menemani harimu!
-                </p>
+                <p class="card-text">Rekomendasi lagu Hindi!</p>
                 <div class="song-list mt-3">
                   <ul class="list-group bg-transparent">
                     <li class="list-group-item bg-light rounded-3 mb-2">
                       <iframe
-                        style="border-radius: 12px"
+                        class="spotify-frame"
                         src="https://open.spotify.com/embed/track/5xYpEeGFXmkGMBQ22NfKfO?utm_source=generator"
-                        width="100%"
-                        height="80"
                         frameborder="0"
                         allowfullscreen=""
                         allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
-                      >
-                      </iframe>
+                      ></iframe>
                     </li>
                     <li class="list-group-item bg-light rounded-3 mb-2">
                       <iframe
-                        style="border-radius: 12px"
+                        class="spotify-frame"
                         src="https://open.spotify.com/embed/track/732Zsh1L5ixRNgAmiPyvrp?utm_source=generator"
-                        width="100%"
-                        height="80"
                         frameborder="0"
                         allowfullscreen=""
                         allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
-                      >
-                      </iframe>
+                      ></iframe>
                     </li>
                   </ul>
                   <a
-                    href="https://open.spotify.com/genre/bollywood"
+                    href="https://open.spotify.com/genre/classical"
                     target="_blank"
-                    class="btn btn-warning text-dark btn-sm mt-2 shadow-sm"
-                    >✨ Lihat di Spotify</a
+                    class="btn-spotify"
                   >
+                    Lihat di Spotify
+                  </a>
                 </div>
               </div>
             </div>
           </div>
 
+          <!-- EDM Card -->
           <div class="col-md-4">
             <div
-              class="card genre-card h-100 text-white"
-              style="
-                background: linear-gradient(135deg, #00c6ff, #0072ff);
-                border-radius: 15px;
-                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-                transition: transform 0.3s;
-              "
-              onmouseover="this.style.transform='scale(1.05)'"
-              onmouseout="this.style.transform='scale(1)'"
+              class="card genre-card laguedm h-100 text-white"
               onclick="toggleSongs(this)"
             >
               <div class="card-body text-center">
-                <!-- <span class="badge bg-info text-dark mb-2">⚡ EDM Vibes</span> -->
                 <h3 class="card-title">🎧 EDM</h3>
-                <p class="card-text">
-                  Rasakan hentakan musik EDM untuk menyalakan energimu!
-                </p>
+                <p class="card-text">Rasakan hentakan musik EDM!</p>
                 <div class="song-list mt-3">
                   <ul class="list-group bg-transparent">
                     <li class="list-group-item bg-light rounded-3 mb-2">
                       <iframe
-                        style="border-radius: 12px"
+                        class="spotify-embed"
                         src="https://open.spotify.com/embed/track/7ouMYWpwJ422jRcDASZB7P?utm_source=generator"
                         width="100%"
                         height="80"
@@ -294,7 +450,7 @@
                     </li>
                     <li class="list-group-item bg-light rounded-3 mb-2">
                       <iframe
-                        style="border-radius: 12px"
+                        class="spotify-embed"
                         src="https://open.spotify.com/embed/track/4h8VwCb1MTGoLKueQ1WgbD?utm_source=generator"
                         width="100%"
                         height="80"
@@ -305,32 +461,23 @@
                     </li>
                   </ul>
                   <a
-                    href="https://open.spotify.com/genre/edm"
+                    href="https://open.spotify.com/genre/classical"
                     target="_blank"
-                    class="btn btn-info text-dark btn-sm mt-2 shadow-sm"
-                    >🔊 Lihat di Spotify</a
+                    class="btn-spotify"
                   >
+                    Lihat di Spotify
+                  </a>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Classical Card -->
           <div class="col-md-4">
             <div
-              class="card genre-card h-100 text-dark"
-              style="
-                background: linear-gradient(135deg, #f9f9f9, #e2d1c3);
-                border-radius: 15px;
-                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-                transition: transform 0.3s;
-              "
-              onmouseover="this.style.transform='scale(1.05)'"
-              onmouseout="this.style.transform='scale(1)'"
+              class="card genre-card laguclassical h-100 text-dark"
               onclick="toggleSongs(this)"
             >
               <div class="card-body text-center">
-                <!-- <span class="badge bg-secondary mb-2">🎼 Masterpiece</span> -->
                 <h3 class="card-title">🎻 Classical</h3>
                 <p class="card-text">
                   Tenangkan pikiranmu dengan musik klasik abadi.
@@ -339,7 +486,7 @@
                   <ul class="list-group bg-transparent">
                     <li class="list-group-item bg-white rounded-3 mb-2">
                       <iframe
-                        style="border-radius: 12px"
+                        class="spotify-embed"
                         src="https://open.spotify.com/embed/track/2qOm7ukLyHUXWyR4ZWLwxA?utm_source=generator"
                         width="100%"
                         height="80"
@@ -350,7 +497,7 @@
                     </li>
                     <li class="list-group-item bg-white rounded-3 mb-2">
                       <iframe
-                        style="border-radius: 12px"
+                        class="spotify-embed"
                         src="https://open.spotify.com/embed/track/3zBhihYUHBmGd2bcQIobrF?utm_source=generator"
                         width="100%"
                         height="80"
@@ -363,9 +510,10 @@
                   <a
                     href="https://open.spotify.com/genre/classical"
                     target="_blank"
-                    class="btn btn-secondary btn-sm mt-2 shadow-sm"
-                    >🎶 Lihat di Spotify</a
+                    class="btn-spotify"
                   >
+                    Lihat di Spotify
+                  </a>
                 </div>
               </div>
             </div>
