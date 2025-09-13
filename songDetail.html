@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detail Lagu - Music Blog</title>
+    <link
+      rel="stylesheet"
+      href="/assets/vendor/bootstrap-5.3.8-dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+  </head>
+  <body>
+     <!-- Header -->
+    <header class="bg-primary text-white py-4 mb-4">
+      <div class="container">
+        <h1 class="mb-2 text-center">Music Blog</h1>
+        <nav class="mb-2 d-flex justify-content-center">
+          <a href="index.html" class="text-white mx-3 text-decoration-none fw-semibold">Home</a>
+          <a href="songDetail.html" class="text-white mx-3 text-decoration-none fw-semibold">Song Detail</a>
+          <a href="about.html" class="text-white mx-3 text-decoration-none fw-semibold">About</a>
+        </nav>
+        <hr class="border-light" />
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <div class="container">
+        <div class="row">
+          <!-- Cover Art -->
+          <div class="col-md-4 mb-3">
+            <img src="https://i.scdn.co/image/ab67616d0000b2736e2c6c1d9db9d8c731f5c5a0" 
+                 alt="Cover Album" class="img-fluid rounded shadow">
+          </div>
+
+          <!-- Song Details -->
+          <div class="col-md-8">
+            <article class="mb-4">
+              <h2>Judul Lagu</h2>
+              <p><strong>Artis:</strong> Nama Artis</p>
+              <p><strong>Album:</strong> Nama Album</p>
+              <p><strong>Genre:</strong> Genre Lagu</p>
+              <p><strong>Deskripsi:</strong> Lagu ini bercerita tentang ...</p>
+              <p><strong>Informasi Latar Belakang:</strong> Lagu ini dirilis pada tahun ... dan sempat masuk ke chart Billboard.</p>
+              
+              <!-- Spotify Embed -->
+              <div class="mb-3">
+                <iframe style="border-radius:12px" 
+                        src="https://open.spotify.com/embed/track/2X485T9Z5Ly0xyaghN73ed?utm_source=generator" 
+                        width="100%" 
+                        height="152" 
+                        frameBorder="0" 
+                        allowfullscreen 
+                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture">
+                </iframe>
+              </div>
+              
+              <!-- Listen Button -->
+              <a href="https://open.spotify.com/track/your_spotify_link" class="btn btn-success mb-3" target="_blank">Dengarkan di Spotify</a>
+            </article>
+          </div>
+        </div>
+
+        <!-- Lirik -->
+        <section class="mb-4">
+          <h4>Lirik Lagu</h4>
+          <p>
+            "Potongan lirik lagu di sini... <br>
+            Bisa ditampilkan sebagian lalu tambahkan tombol untuk expand."
+          </p>
+          <button class="btn btn-outline-primary btn-sm">Tampilkan lebih banyak</button>
+        </section>
+
+        <!-- Fakta Menarik -->
+        <section class="mb-4">
+          <h4>Fakta Menarik</h4>
+          <ul class="list-group">
+            <li class="list-group-item">Lagu ini memenangkan penghargaan ...</li>
+            <li class="list-group-item">Diputar lebih dari 1 miliar kali di Spotify.</li>
+            <li class="list-group-item">Ditulis hanya dalam waktu 1 malam.</li>
+          </ul>
+        </section>
+
+        <!-- Rekomendasi Lagu -->
+        <section class="mb-4">
+          <h4>Rekomendasi Lagu Terkait</h4>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card h-100">
+                <iframe style="border-radius:12px" 
+                        src="https://open.spotify.com/embed/track/6rqhFgbbKwnb9MLmUQDhG6?utm_source=generator" 
+                        width="100%" 
+                        height="152" 
+                        frameBorder="0" 
+                        allowfullscreen 
+                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture">
+                </iframe>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card h-100">
+                <iframe style="border-radius:12px" 
+                        src="https://open.spotify.com/embed/track/732Zsh1L5ixRNgAmiPyvrp?utm_source=generator" 
+                        width="100%" 
+                        height="152" 
+                        frameBorder="0" 
+                        allowfullscreen 
+                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture">
+                </iframe>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-light text-center py-3 mt-4">
+      <div class="container">
+        <hr />
+        <p class="mb-0">&copy; 2025 Music Blog. Semua hak cipta dilindungi.</p>
+      </div>
+    </footer>
+
+    <script src="/assets/vendor/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

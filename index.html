@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Blog - Song Recommendations</title>
+    <link
+      rel="stylesheet"
+      href="assets/vendor/bootstrap-5.3.8-dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/custom.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header style="background-color: #1ed760" class="text-white py-4 mb-4">
+      <div class="container">
+        <h1 class="mb-2 text-center">Music Blog</h1>
+        <nav class="mb-2 d-flex justify-content-center">
+          <a
+            href="index.html"
+            class="text-white mx-3 text-decoration-none fw-semibold"
+            >Home</a
+          >
+          <a
+            href="songDetail.html"
+            class="text-white mx-3 text-decoration-none fw-semibold"
+            >Song Detail</a
+          >
+          <a
+            href="about.html"
+            class="text-white mx-3 text-decoration-none fw-semibold"
+            >About</a
+          >
+        </nav>
+        <hr class="border-light" />
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <div class="container">
+        <h2 class="mb-4">Song Recommendations</h2>
+        <div class="row g-4">
+          <!-- Pop Card -->
+          <div class="col-md-4">
+            <div class="card genre-card genre-pop h-100 text-white">
+              <div class="card-body text-center">
+                <h3 class="card-title">🎶 Pop</h3>
+                <p class="card-text">
+                  Rekomendasi lagu pop terbaik untuk menemani harimu!
+                </p>
+                <div class="song-list mt-3">
+                  <ul class="list-group bg-transparent">
+                    <li class="list-group-item bg-light rounded-3 mb-2">
+                      <iframe
+                        style="border-radius: 12px"
+                        src="https://open.spotify.com/embed/track/7qiZfU4dY1lWllzX7mPBI3?utm_source=generator"
+                        width="100%"
+                        height="80"
+                        frameborder="0"
+                        allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
+                      ></iframe>
+                    </li>
+                    <li class="list-group-item bg-light rounded-3 mb-2">
+                      <iframe
+                        style="border-radius: 12px"
+                        src="https://open.spotify.com/embed/track/3KkXRkHbMCARz0aVfEt68P?utm_source=generator"
+                        width="100%"
+                        height="80"
+                        frameborder="0"
+                        allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
+                      ></iframe>
+                    </li>
+                  </ul>
+                  <a
+                    href="https://open.spotify.com/genre/pop"
+                    target="_blank"
+                    class="btn btn-light btn-sm mt-2 shadow-sm"
+                    >Lihat di Spotify</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Rock Card -->
+          <div class="col-md-4">
+            <div
+              class="card genre-card h-100 text-white"
+              style="
+                background: linear-gradient(135deg, #232526, #414345);
+                border-radius: 15px;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+                transition: transform 0.3s;
+              "
+              onmouseover="this.style.transform='scale(1.05)'"
+              onmouseout="this.style.transform='scale(1)'"
+              onclick="toggleSongs(this)"
+            >
+              <div class="card-body text-center">
+                <!-- <span class="badge bg-danger mb-2">⚡ Power Rock</span> -->
+                <h3 class="card-title">🎸 Rock</h3>
+                <p class="card-text">
+                  Energi dan semangat dari lagu-lagu rock pilihan!
+                </p>
+                <div class="song-list mt-3">
+                  <ul class="list-group bg-transparent">
+                    <li
+                      class="list-group-item bg-dark text-white rounded-3 mb-2"
+                    >
+                      <iframe
+                        style="border-radius: 12px"
+                        src="https://open.spotify.com/embed/track/3H8cRqHxtvG5tlMXEdxLr1?utm_source=generator"
+                        width="100%"
+                        height="80"
+                        frameborder="0"
+                        allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
+                      ></iframe>
+                    </li>
+                    <li
+                      class="list-group-item bg-dark text-white rounded-3 mb-2"
+                    >
+                      <iframe
+                        style="border-radius: 12px"
+                        src="https://open.spotify.com/embed/track/0eGsygTp906u18L0Oimnem?utm_source=generator"
+                        width="100%"
+                        height="80"
+                        frameborder="0"
+                        allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
+                      ></iframe>
+                    </li>
+                  </ul>
+                  <a
+                    href="https://open.spotify.com/genre/rock"
+                    target="_blank"
+                    class="btn btn-danger btn-sm mt-2 shadow-sm"
+                    >🔥 Lihat di Spotify</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Jazz Card -->
+          <div class="col-md-4">
+            <div
+              class="card genre-card h-100 text-white"
+              style="
+                background: linear-gradient(135deg, #1e3c72, #2a5298);
+                border-radius: 15px;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+                transition: transform 0.3s;
+              "
+              onmouseover="this.style.transform='scale(1.05)'"
+              onmouseout="this.style.transform='scale(1)'"
+              onclick="toggleSongs(this)"
+            >
+              <div class="card-body text-center">
+                <!-- <span class="badge bg-warning text-dark mb-2">🎷 Smooth Jazz</span> -->
+                <h3 class="card-title">🎶 Jazz</h3>
+                <p class="card-text fst-italic">
+                  Nikmati suasana santai dengan lagu jazz favorit!
+                </p>
+                <div class="song-list mt-3">
+                  <ul class="list-group bg-transparent">
+                    <li class="list-group-item bg-light rounded-3 mb-2">
+                      <iframe
+                        style="border-radius: 12px"
+                        src="https://open.spotify.com/embed/track/2X485T9Z5Ly0xyaghN73ed?utm_source=generator"
+                        width="100%"
+                        height="80"
+                        frameborder="0"
+                        allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
+                      ></iframe>
+                    </li>
+                    <li class="list-group-item bg-light rounded-3 mb-2">
+                      <iframe
+                        style="border-radius: 12px"
+                        src="https://open.spotify.com/embed/track/6rqhFgbbKwnb9MLmUQDhG6?utm_source=generator"
+                        width="100%"
+                        height="80"
+                        frameborder="0"
+                        allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
+                      ></iframe>
+                    </li>
+                  </ul>
+                  <a
+                    href="https://open.spotify.com/genre/jazz"
+                    target="_blank"
+                    class="btn btn-warning text-dark btn-sm mt-2 shadow-sm"
+                    >☕ Lihat di Spotify</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hindi Card -->
+          <div class="col-md-4">
+            <div
+              class="card genre-card h-100 text-white"
+              style="
+                background: linear-gradient(135deg, #ff512f, #dd2476);
+                border-radius: 15px;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+                transition: transform 0.3s;
+              "
+              onmouseover="this.style.transform='scale(1.05)'"
+              onmouseout="this.style.transform='scale(1)'"
+              onclick="toggleSongs(this)"
+            >
+              <div class="card-body text-center">
+                <!-- <span class="badge bg-warning text-dark mb-2">🌺 Bollywood Vibes</span> -->
+                <h3 class="card-title">🎤 Hindi</h3>
+                <p class="card-text">
+                  Rekomendasi lagu Hindi terbaik untuk menemani harimu!
+                </p>
+                <div class="song-list mt-3">
+                  <ul class="list-group bg-transparent">
+                    <li class="list-group-item bg-light rounded-3 mb-2">
+                      <iframe
+                        style="border-radius: 12px"
+                        src="https://open.spotify.com/embed/track/5xYpEeGFXmkGMBQ22NfKfO?utm_source=generator"
+                        width="100%"
+                        height="80"
+                        frameborder="0"
+                        allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
+                      >
+                      </iframe>
+                    </li>
+                    <li class="list-group-item bg-light rounded-3 mb-2">
+                      <iframe
+                        style="border-radius: 12px"
+                        src="https://open.spotify.com/embed/track/732Zsh1L5ixRNgAmiPyvrp?utm_source=generator"
+                        width="100%"
+                        height="80"
+                        frameborder="0"
+                        allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
+                      >
+                      </iframe>
+                    </li>
+                  </ul>
+                  <a
+                    href="https://open.spotify.com/genre/bollywood"
+                    target="_blank"
+                    class="btn btn-warning text-dark btn-sm mt-2 shadow-sm"
+                    >✨ Lihat di Spotify</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div
+              class="card genre-card h-100 text-white"
+              style="
+                background: linear-gradient(135deg, #00c6ff, #0072ff);
+                border-radius: 15px;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+                transition: transform 0.3s;
+              "
+              onmouseover="this.style.transform='scale(1.05)'"
+              onmouseout="this.style.transform='scale(1)'"
+              onclick="toggleSongs(this)"
+            >
+              <div class="card-body text-center">
+                <!-- <span class="badge bg-info text-dark mb-2">⚡ EDM Vibes</span> -->
+                <h3 class="card-title">🎧 EDM</h3>
+                <p class="card-text">
+                  Rasakan hentakan musik EDM untuk menyalakan energimu!
+                </p>
+                <div class="song-list mt-3">
+                  <ul class="list-group bg-transparent">
+                    <li class="list-group-item bg-light rounded-3 mb-2">
+                      <iframe
+                        style="border-radius: 12px"
+                        src="https://open.spotify.com/embed/track/7ouMYWpwJ422jRcDASZB7P?utm_source=generator"
+                        width="100%"
+                        height="80"
+                        frameborder="0"
+                        allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
+                      ></iframe>
+                    </li>
+                    <li class="list-group-item bg-light rounded-3 mb-2">
+                      <iframe
+                        style="border-radius: 12px"
+                        src="https://open.spotify.com/embed/track/4h8VwCb1MTGoLKueQ1WgbD?utm_source=generator"
+                        width="100%"
+                        height="80"
+                        frameborder="0"
+                        allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
+                      ></iframe>
+                    </li>
+                  </ul>
+                  <a
+                    href="https://open.spotify.com/genre/edm"
+                    target="_blank"
+                    class="btn btn-info text-dark btn-sm mt-2 shadow-sm"
+                    >🔊 Lihat di Spotify</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Classical Card -->
+          <div class="col-md-4">
+            <div
+              class="card genre-card h-100 text-dark"
+              style="
+                background: linear-gradient(135deg, #f9f9f9, #e2d1c3);
+                border-radius: 15px;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+                transition: transform 0.3s;
+              "
+              onmouseover="this.style.transform='scale(1.05)'"
+              onmouseout="this.style.transform='scale(1)'"
+              onclick="toggleSongs(this)"
+            >
+              <div class="card-body text-center">
+                <!-- <span class="badge bg-secondary mb-2">🎼 Masterpiece</span> -->
+                <h3 class="card-title">🎻 Classical</h3>
+                <p class="card-text">
+                  Tenangkan pikiranmu dengan musik klasik abadi.
+                </p>
+                <div class="song-list mt-3">
+                  <ul class="list-group bg-transparent">
+                    <li class="list-group-item bg-white rounded-3 mb-2">
+                      <iframe
+                        style="border-radius: 12px"
+                        src="https://open.spotify.com/embed/track/2qOm7ukLyHUXWyR4ZWLwxA?utm_source=generator"
+                        width="100%"
+                        height="80"
+                        frameborder="0"
+                        allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
+                      ></iframe>
+                    </li>
+                    <li class="list-group-item bg-white rounded-3 mb-2">
+                      <iframe
+                        style="border-radius: 12px"
+                        src="https://open.spotify.com/embed/track/3zBhihYUHBmGd2bcQIobrF?utm_source=generator"
+                        width="100%"
+                        height="80"
+                        frameborder="0"
+                        allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
+                      ></iframe>
+                    </li>
+                  </ul>
+                  <a
+                    href="https://open.spotify.com/genre/classical"
+                    target="_blank"
+                    class="btn btn-secondary btn-sm mt-2 shadow-sm"
+                    >🎶 Lihat di Spotify</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-light text-center py-3 mt-4">
+      <div class="container">
+        <hr />
+        <p class="mb-0">&copy; 2025 Music Blog. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="assets/vendor/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      function toggleSongs(card) {
+        // Tutup semua card lain
+        document.querySelectorAll(".genre-card").forEach(function (c) {
+          if (c !== card) c.classList.remove("active");
+        });
+        // Toggle card yang diklik
+        card.classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>

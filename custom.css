@@ -1,0 +1,89 @@
+.genre-card {
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+.genre-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+.song-list {
+  display: none;
+}
+.genre-card.active .song-list {
+  display: block;
+  animation: fadeIn 0.4s;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.genre-card {
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s, box-shadow 0.2s;
+  cursor: pointer;
+}
+.genre-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Genre backgrounds */
+.genre-pop {
+  background: linear-gradient(135deg, #ff6ec4, #7873f5);
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
+}
+
+.genre-pop:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.genre-rock {
+  background: linear-gradient(135deg, #232526, #414345);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+}
+.genre-jazz {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+.genre-hindi {
+  background: linear-gradient(135deg, #ff512f, #dd2476);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+.genre-edm {
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+.genre-classical {
+  background: linear-gradient(135deg, #f9f9f9, #e2d1c3);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Song list animation */
+.song-list {
+  display: none;
+}
+.genre-card.active .song-list {
+  display: block;
+  animation: fadeIn 0.4s;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
